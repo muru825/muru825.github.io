@@ -1,7 +1,10 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "The Economic Returns to English Proficiency in India:
+Evidence from 2005 and 2012 Panel Data"
+excerpt: ""
 collection: portfolio
+link: /assets/pdf/Final-Paper-191.pdf
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Paper that Explores the returns to knowing at least some English and the impact it has on income in India using panel fixed effects
+
