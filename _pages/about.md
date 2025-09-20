@@ -7,8 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I’m Murari Ganesan, a senior at the University of California, Berkeley, where I study Data Science and Economics. I’m passionate about using data to tackle real-world challenges—whether that’s uncovering insights through causal econometric models or building predictive machine-learning tools. I’ve become fluent in Python, R, SQL, Java and C++, and I enjoy working across the entire data pipeline: gathering and cleaning datasets, designing experiments, and translating results into clear recommendations.
+---
+I'm a senior at the University of California, Berkeley, where I study Data Science and Economics, advised by [Prof. Serina Chang](https://serinachang5.github.io/). I’m interested in exploring how Machine Learning can be applied in social science contexts. 
 
-Beyond technical skills, I thrive in collaborative, interdisciplinary environments. Looking ahead, I plan to pursue a Ph.D., either in computer science or economics.
 
-## Site still under construction
+
+**Areas of Interest: Computational Social Science, Natural Language Processing, Computational Precision Health**
+
+## Current Project
+
+I'm currently working with [Prof. Serina Chang](https://serinachang5.github.io/) exploring how LLMs (or AI in general) can predict public opinions on current events.
