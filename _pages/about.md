@@ -12,7 +12,7 @@ I'm a senior at the University of California, Berkeley, where I study Data Scien
 
 
 
-**Areas of Interest: Computational Social Science, Natural Language Processing, Computational Precision Health, Synthetic Data Generation, Agent Base Modeling**
+**Areas of Interest: Computational Social Science, Natural Language Processing, Computational Precision Health, Agent Base Modeling**
 
 ## Current Project
 
