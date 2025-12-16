@@ -227,6 +227,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  photography:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -276,6 +279,16 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _photography
+  - scope:
+      path: ""
+      type: photography
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+      read_time: true
   # _talks
   - scope:
       path: ""
