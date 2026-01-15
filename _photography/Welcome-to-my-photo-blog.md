@@ -30,3 +30,6 @@ My ex and I spent some time here. There is a tea shop here she loves called Tea 
 ## Telegraph at Night for Christmas
 
 ![Telegraph at Night during December](/images/Telegraph-Christmas-at-Night.jpg)
+
+This photo was an attempt to see what 400 iso film can do in the dark. I took quite a few in the dark, but what I've quickly learned is that its quite challenging to do without a tripod. I know it isn't a shocking revelation, but I'm just doing this for fun anyways. 
+
