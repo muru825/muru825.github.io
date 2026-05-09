@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "DSCF0216.jpg"
   name             : "Murari Ganesan"
   pronouns         : # example: "she/her"  
   bio              : "Undergraduate Student studying Data Science and Economics. Planning on pursuing a PhD Computer Science"
