@@ -125,81 +125,65 @@ title: Contact
   }
 </style>
 
+{% assign c = site.data.contact %}
+
 <div class="contact-main">
 
   <header>
-    <p class="page-eyebrow">Let's connect</p>
-    <h1 class="page-title-lg">Get in<br><em>touch.</em></h1>
+    <p class="page-eyebrow">{{ c.page.eyebrow }}</p>
+    <h1 class="page-title-lg">{{ c.page.title_line1 }}<br><em>{{ c.page.title_line2 }}</em></h1>
     <div class="page-divider"></div>
-    <p class="page-desc">
-      I'm always happy to talk research, collaborations, or just swap ideas. Reach out through any of the channels below.
-    </p>
+    <p class="page-desc">{{ c.page.description }}</p>
   </header>
 
   <div class="contact-list">
+    {% for item in c.contacts %}
 
-    <a href="mailto:{{ site.author.email }}" class="contact-row">
-      <div class="contact-icon">
-        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="4" width="16" height="12" rx="2" stroke="#4a60b8" stroke-width="1.5"/>
-          <path d="M2 7l8 5 8-5" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="contact-body">
-        <div class="contact-row-label">Email</div>
-        <div class="contact-row-value">{{ site.author.email }}</div>
-      </div>
-      <div class="contact-arrow">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-    </a>
+      {%- comment -%}Build href and display from _config.yml author fields{%- endcomment -%}
+      {% case item.type %}
+        {% when 'email' %}
+          {% assign item_href    = 'mailto:' | append: site.author.email %}
+          {% assign item_display = site.author.email %}
+          {% assign item_target  = '' %}
+        {% when 'github' %}
+          {% assign item_href    = 'https://github.com/' | append: site.author.github %}
+          {% assign item_display = 'github.com/' | append: site.author.github %}
+          {% assign item_target  = '_blank' %}
+        {% when 'linkedin' %}
+          {% assign item_href    = 'https://linkedin.com/in/' | append: site.author.linkedin %}
+          {% assign item_display = item.display | default: site.author.linkedin %}
+          {% assign item_target  = '_blank' %}
+        {% else %}
+          {% assign item_href    = item.href %}
+          {% assign item_display = item.display %}
+          {% assign item_target  = '_blank' %}
+      {% endcase %}
 
-    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="contact-row">
-      <div class="contact-icon">
-        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58 2 2 5.694 2 10.253c0 3.651 2.292 6.747 5.471 7.842.4.075.546-.178.546-.396 0-.196-.007-.713-.011-1.4-2.225.496-2.695-1.1-2.695-1.1-.364-.948-.888-1.2-.888-1.2-.726-.509.055-.499.055-.499.803.058 1.225.845 1.225.845.714 1.252 1.873.89 2.328.681.072-.53.279-.89.508-1.094-1.776-.207-3.644-.91-3.644-4.049 0-.895.31-1.626.818-2.2-.082-.207-.355-1.04.078-2.168 0 0 .667-.219 2.185.836A7.42 7.42 0 0 1 10 5.932c.675.003 1.354.094 1.989.275 1.517-1.055 2.183-.836 2.183-.836.434 1.128.161 1.961.079 2.168.51.574.817 1.305.817 2.2 0 3.147-1.871 3.84-3.653 4.043.287.253.543.754.543 1.52 0 1.096-.01 1.98-.01 2.25 0 .22.144.475.55.394C15.71 16.997 18 13.902 18 10.253 18 5.694 14.418 2 10 2Z" fill="#4a60b8"/>
-        </svg>
-      </div>
-      <div class="contact-body">
-        <div class="contact-row-label">GitHub</div>
-        <div class="contact-row-value">github.com/{{ site.author.github }}</div>
-      </div>
-      <div class="contact-arrow">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-    </a>
+      {%- if item.display -%}{% assign item_display = item.display %}{%- endif -%}
 
-    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" class="contact-row">
-      <div class="contact-icon">
-        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="16" height="16" rx="3" stroke="#4a60b8" stroke-width="1.5"/>
-          <path d="M6 8.5V14M6 6v.5" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M9.5 14v-3c0-1.381.895-2.5 2-2.5s2 1.119 2 2.5V14" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M9.5 8.5V14" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="contact-body">
-        <div class="contact-row-label">LinkedIn</div>
-        <div class="contact-row-value">Murari Ganesan</div>
-      </div>
-      <div class="contact-arrow">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-    </a>
+      <a href="{{ item_href }}"
+         class="contact-row"
+         {% if item_target != '' %}target="{{ item_target }}" rel="noopener"{% endif %}>
+        <div class="contact-icon">
+          {% include contact-icon.html type=item.type %}
+        </div>
+        <div class="contact-body">
+          <div class="contact-row-label">{{ item.label }}</div>
+          <div class="contact-row-value">{{ item_display }}</div>
+        </div>
+        <div class="contact-arrow">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
 
+    {% endfor %}
   </div>
 
   <div class="availability">
     <div class="availability-dot"></div>
-    <p class="availability-text">
-      <strong>Currently open to PhD program opportunities</strong> starting Fall 2027, as well as research collaborations and conversations about computational social science and NLP.
-    </p>
+    <p class="availability-text">{{ c.availability }}</p>
   </div>
 
 </div>
