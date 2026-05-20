@@ -11,9 +11,9 @@ title: Photography
     {%- assign photo_count = 0 -%}
     {%- for file in site.static_files -%}
       {%- if file.path contains '/assets/photos/' -%}
-        {%- if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.webp' -%}
+        {%- if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.webp' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.PNG' or file.extname == '.WEBP' -%}
           {%- assign photo_count = photo_count | plus: 1 -%}
-          <div class="photo-item">
+          <div class="photo-item" onclick="openLightbox(this.querySelector('img').src)">
             <img src="{{ file.path | relative_url }}"
                  alt="Photo"
                  loading="lazy" />
@@ -35,3 +35,22 @@ title: Photography
     {%- endif -%}
   </div>
 </div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded photo" onclick="event.stopPropagation()" />
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
