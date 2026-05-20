@@ -24,7 +24,7 @@
         </a>
       {% endfor %}
     </div>
-    <a href="mailto:{{ site.author.email }}" class="nav-contact">Contact</a>
+    <a href="{{ '/contact' | relative_url }}" class="nav-contact">Contact</a>
   </nav>
 
   <main>{{ content }}</main>
