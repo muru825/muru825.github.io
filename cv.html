@@ -1,0 +1,26 @@
+---
+layout: default
+title: CV
+---
+
+<div class="page-layout">
+  <h1 class="page-title">CV</h1>
+
+  <!--
+    Put your CV PDF at assets/Murari_Ganesan_CV.pdf
+    (rename as needed and update the href below)
+  -->
+  <a href="{{ '/assets/Murari_Ganesan_CV.pdf' | relative_url }}"
+     target="_blank" class="cv-download">
+    Download PDF →
+  </a>
+
+  <iframe src="{{ '/assets/Murari_Ganesan_CV.pdf' | relative_url }}"
+          class="cv-embed"
+          title="Murari Ganesan CV">
+    <p>
+      Your browser does not support embedded PDFs.
+      <a href="{{ '/assets/Murari_Ganesan_CV.pdf' | relative_url }}">Download it here.</a>
+    </p>
+  </iframe>
+</div>

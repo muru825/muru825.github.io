@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────────
+# Research papers — each entry appears on the /research page.
+# Fields:
+#   title    (required)
+#   authors  e.g. "Murari Ganesan, Serina Chang"
+#   venue    e.g. "ACL 2024 Workshop" or "In preparation"
+#   year     (required)
+#   url      link to paper PDF or arxiv (leave blank if not yet published)
+# ─────────────────────────────────────────────────────────────────
+
+# Replace these placeholders with your actual papers.
+# Most recent first.
+
+- title: "Your Paper Title Here"
+  authors: "Murari Ganesan, Collaborator Name"
+  venue: "Conference or Journal Name"
+  year: 2025
+  url: ""
+
+- title: "Your Second Paper Title"
+  authors: "Murari Ganesan, Collaborator Name"
+  venue: "Conference or Journal Name"
+  year: 2024
+  url: ""

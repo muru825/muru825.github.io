@@ -1,0 +1,42 @@
+---
+layout: default
+title: Research
+---
+
+<div class="page-layout">
+  <h1 class="page-title">Research</h1>
+  <p class="page-subtitle">
+    My work sits at the intersection of machine learning and the social sciences.
+  </p>
+
+  <div class="research-list">
+    {%- for paper in site.data.research -%}
+    <div class="research-item">
+      <div>
+        <div class="research-title">
+          {%- if paper.url and paper.url != "" -%}
+            <a href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.title }}</a>
+          {%- else -%}
+            {{ paper.title }}
+          {%- endif -%}
+        </div>
+        {%- if paper.authors and paper.authors != "" -%}
+          <div class="research-authors">{{ paper.authors }}</div>
+        {%- endif -%}
+        {%- if paper.venue and paper.venue != "" -%}
+          <div class="research-venue">{{ paper.venue }}</div>
+        {%- endif -%}
+      </div>
+      {%- if paper.year -%}
+        <div class="research-year">{{ paper.year }}</div>
+      {%- endif -%}
+    </div>
+    {%- endfor -%}
+
+    {%- if site.data.research.size == 0 -%}
+    <p style="color: var(--muted); font-size: 14px; padding: 32px 0;">
+      No papers yet — add entries to _data/research.yml
+    </p>
+    {%- endif -%}
+  </div>
+</div>
