@@ -19,19 +19,14 @@ author:
     Planning to pursue a PhD in Computer Science.
   # Path to your profile photo inside the repo (put the file in assets/img/)
   # Leave blank to show a placeholder
-  photo: ""
+  photo: "assets/img/profile.jpg"
   interests:
     - Comp. Social Science
     - NLP
     - Agent-Based Modeling
-    - Precision Health
+    - Comp. Precision Health
   stats:
-    - label: Advisor
-      value: Prof. Serina Chang
-    - label: Publications
-      value: "2+"
-    - label: Open to
-      value: PhD Programs
+
 
 # ─────────────────────────────────────────────────────────────────
 # Jekyll settings — no need to touch these
