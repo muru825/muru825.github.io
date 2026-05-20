@@ -1,0 +1,29 @@
+---
+layout: default
+title: News
+---
+
+<div class="page-layout">
+  <h1 class="page-title">News</h1>
+  <p class="page-subtitle">Short updates on what I'm working on.</p>
+
+  <div class="news-feed">
+    {%- for entry in site.data.news -%}
+    <div class="news-entry">
+      <div class="news-date">{{ entry.date | date: "%b %-d, %Y" }}</div>
+      <div class="news-body">
+        <p class="news-text">{{ entry.text }}</p>
+        {%- if entry.tag and entry.tag != "" -%}
+          <span class="news-tag">{{ entry.tag }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- endfor -%}
+
+    {%- if site.data.news.size == 0 -%}
+    <p style="color: var(--muted); font-size: 14px; padding: 32px 0;">
+      No updates yet — add entries to _data/news.yml
+    </p>
+    {%- endif -%}
+  </div>
+</div>

@@ -14,7 +14,7 @@
   <nav class="nav">
     <a href="{{ '/' | relative_url }}" class="nav-logo">{{ site.author.initials | default: "MG" }}</a>
     <div class="nav-links">
-      {% assign nav_pages = "About,/|Research,/research|CV,/cv|Photography,/photography|Blog,/blog" | split: "|" %}
+      {% assign nav_pages = "About,/|Research,/research|CV,/cv|Photography,/photography|News,/news" | split: "|" %}
       {% for item in nav_pages %}
         {% assign parts = item | split: "," %}
         {% assign nav_url = parts[1] | append: '/' %}
@@ -36,10 +36,10 @@
         <a href="https://github.com/{{ site.author.github }}">GitHub</a>
       {% endif %}
       {% if site.author.email %}
-        <a href="mailto:{{ site.author.email }}">Email</a>
+        <a href="/cdn-cgi/l/email-protection#8af1f1aaf9e3feefa4ebfffee2e5f8a4efe7ebe3e6aaf7f7">Email</a>
       {% endif %}
     </div>
   </footer>
 
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>

@@ -1,0 +1,17 @@
+# ─────────────────────────────────────────────────────────────────
+# News / Updates — appears on /news and the homepage "Latest" column.
+# Fields:
+#   date   YYYY-MM-DD  (required)
+#   text   1–3 sentences shown as-is  (required)
+#   tag    optional label, e.g. research | milestone | travel | personal
+# Most recent first.
+# ─────────────────────────────────────────────────────────────────
+
+- date: 2026-05-15
+  text: "Submitted my senior data science thesis on LLM opinion prediction!"
+  tag: milestone
+
+- date: 2026-05-07
+  text: "Presented at the Berkeley Data Science Discovery program showcase. Lots of great conversations!"
+  tag: research
+

@@ -32,20 +32,24 @@ title: ""
     </div>
   </div>
 
-  <div class="hero-stats">
-    {%- for stat in site.author.stats -%}
-    <div class="stat">
-      <div class="stat-label">{{ stat.label }}</div>
-      <div class="stat-value">{{ stat.value }}</div>
+  {%- if site.data.news.size > 0 -%}
+  <div class="hero-latest">
+    <div class="hero-latest-label">Latest</div>
+    {%- for entry in site.data.news limit:3 -%}
+    <div class="hero-news-item">
+      <div class="hero-news-date">{{ entry.date | date: "%b %Y" }}</div>
+      <p class="hero-news-text">{{ entry.text | truncate: 100 }}</p>
     </div>
     {%- endfor -%}
+    <a href="{{ '/news' | relative_url }}" class="hero-news-all">All updates →</a>
   </div>
+  {%- endif -%}
 
 </section>
 
 <nav class="section-strip">
   <a href="{{ '/research' | relative_url }}" class="section-strip-item">Research</a>
   <a href="{{ '/photography' | relative_url }}" class="section-strip-item">Photography</a>
-  <a href="{{ '/blog' | relative_url }}" class="section-strip-item">Writing</a>
+  <a href="{{ '/news' | relative_url }}" class="section-strip-item">News</a>
   <a href="{{ '/cv' | relative_url }}" class="section-strip-item">CV</a>
 </nav>
