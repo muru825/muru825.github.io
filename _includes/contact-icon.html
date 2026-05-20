@@ -1,0 +1,28 @@
+{% case include.type %}
+
+{% when 'email' %}
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="4" width="16" height="12" rx="2" stroke="#4a60b8" stroke-width="1.5"/>
+  <path d="M2 7l8 5 8-5" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+{% when 'github' %}
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58 2 2 5.694 2 10.253c0 3.651 2.292 6.747 5.471 7.842.4.075.546-.178.546-.396 0-.196-.007-.713-.011-1.4-2.225.496-2.695-1.1-2.695-1.1-.364-.948-.888-1.2-.888-1.2-.726-.509.055-.499.055-.499.803.058 1.225.845 1.225.845.714 1.252 1.873.89 2.328.681.072-.53.279-.89.508-1.094-1.776-.207-3.644-.91-3.644-4.049 0-.895.31-1.626.818-2.2-.082-.207-.355-1.04.078-2.168 0 0 .667-.219 2.185.836A7.42 7.42 0 0 1 10 5.932c.675.003 1.354.094 1.989.275 1.517-1.055 2.183-.836 2.183-.836.434 1.128.161 1.961.079 2.168.51.574.817 1.305.817 2.2 0 3.147-1.871 3.84-3.653 4.043.287.253.543.754.543 1.52 0 1.096-.01 1.98-.01 2.25 0 .22.144.475.55.394C15.71 16.997 18 13.902 18 10.253 18 5.694 14.418 2 10 2Z" fill="#4a60b8"/>
+</svg>
+
+{% when 'linkedin' %}
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="16" height="16" rx="3" stroke="#4a60b8" stroke-width="1.5"/>
+  <path d="M6 8.5V14M6 6v.5" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M9.5 14v-3c0-1.381.895-2.5 2-2.5s2 1.119 2 2.5V14" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M9.5 8.5V14" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+{% else %}
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="10" cy="10" r="7" stroke="#4a60b8" stroke-width="1.5"/>
+  <path d="M10 7v3l2 2" stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+{% endcase %}

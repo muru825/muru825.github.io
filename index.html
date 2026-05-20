@@ -1,0 +1,55 @@
+---
+layout: default
+title: ""
+---
+
+<section class="hero">
+
+  {%- if site.author.photo and site.author.photo != "" -%}
+    <img src="{{ site.author.photo | relative_url }}"
+         alt="{{ site.author.name }}"
+         class="hero-photo" />
+  {%- else -%}
+    <div class="hero-photo-placeholder">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="13" r="6" stroke="#4a60b8" stroke-width="1.5"/>
+        <path d="M4 32c0-7.732 6.268-14 14-14s14 6.268 14 14"
+              stroke="#4a60b8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      portrait
+    </div>
+  {%- endif -%}
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">{{ site.author.employer }} — {{ site.author.field }}</p>
+    <h1 class="hero-name">{{ site.author.name | replace: " ", "<br>" }}</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-bio">{{ site.author.bio }}</p>
+    <div class="hero-tags">
+      {%- for interest in site.author.interests -%}
+        <span class="tag">{{ interest }}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- if site.data.news.size > 0 -%}
+  <div class="hero-latest">
+    <div class="hero-latest-label">Latest</div>
+    {%- for entry in site.data.news limit:3 -%}
+    <div class="hero-news-item">
+      <div class="hero-news-date">{{ entry.date | date: "%b %Y" }}</div>
+      <p class="hero-news-text">{{ entry.text | truncate: 100 }}</p>
+    </div>
+    {%- endfor -%}
+    <a href="{{ '/news' | relative_url }}" class="hero-news-all">All updates →</a>
+  </div>
+  {%- endif -%}
+
+</section>
+
+<nav class="section-strip">
+  <a href="{{ '/research' | relative_url }}" class="section-strip-item">Research</a>
+  <a href="{{ '/photography' | relative_url }}" class="section-strip-item">Photography</a>
+  <a href="{{ '/news' | relative_url }}" class="section-strip-item">News</a>
+  <a href="{{ '/cv' | relative_url }}" class="section-strip-item">CV</a>
+</nav>

@@ -1,0 +1,40 @@
+page:
+  eyebrow: "Let's connect"
+  title_line1: "Get in"
+  title_line2: "touch."
+  description: >
+
+
+availability: >
+  <strong>Currently open to PhD program opportunities</strong> starting Fall 2027,
+  as well as research collaborations and conversations about computational social
+  science and NLP.
+
+# Each contact entry:
+#   type    — used to pick the icon and build the URL from _config.yml author fields.
+#             Built-in types: email, github, linkedin
+#             For a custom URL, set type: custom and add an href field.
+#   label   — uppercase tag shown above the value
+#   display — (optional) overrides the auto-generated display text
+#   href    — required only for type: custom
+#
+# Example of adding a new built-in:
+#   - type: twitter
+#     label: Twitter
+#
+# Example of a fully custom entry:
+#   - type: custom
+#     label: Google Scholar
+#     display: Murari Ganesan
+#     href: https://scholar.google.com/citations?user=XXXX
+
+contacts:
+  - type: email
+    label: Email
+
+  - type: github
+    label: GitHub
+
+  - type: linkedin
+    label: LinkedIn
+    display: Murari Ganesan
